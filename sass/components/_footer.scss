@@ -1,5 +1,4 @@
 .page-footer {
-    display: block;
     background-color: var(--footer-background-color);
     // height: 252px;
     padding-top: 60px;
@@ -9,9 +8,7 @@
 
     @media screen and (min-width: $tablet) {}
 
-    @media screen and (min-width: $desktop) {
-        height: 252px;
-    }
+    @media screen and (min-width: $desktop) {}
 }
 
 .footer {
@@ -50,9 +47,8 @@
     }
 
     @media screen and (min-width: $tablet) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     @media screen and (min-width: $desktop) {

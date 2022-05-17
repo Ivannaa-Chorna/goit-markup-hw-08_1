@@ -48,12 +48,14 @@
     }
 
     @media screen and (min-width: $mobile) {
+        display: block;
         width: 450px;
         margin-left: auto;
         margin-right: auto;
     }
 
     @media screen and (min-width: $tablet) {
+        display: block;
         width: 450px;
         margin-left: auto;
         margin-right: auto;
@@ -66,11 +68,11 @@
 }
 
 .footer__submit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: auto;
-    margin-left: 12px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // margin-right: auto;
+    // margin-left: 12px;
     padding: 0;
     width: 200px;
     height: 50px;
@@ -85,11 +87,39 @@
     border-radius: 4px;
     border: none;
     cursor: pointer;
+
+    @media screen and (min-width: $mobile) {
+        display: block;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: block;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        margin-right: auto;
+        margin-left: 12px;
+    }
 }
 
 .footer__icon-send {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     margin-left: 10px;
     fill: var(--primary-button-text-color);
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: center;
+    }
 }

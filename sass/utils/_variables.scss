@@ -73,6 +73,7 @@ body {
 }
 
 .section--no-padding-top {
+    display: none;
     padding-top: 0;
 
     @media screen and (min-width: $mobile) {
@@ -85,6 +86,7 @@ body {
 
     @media screen and (min-width: $desktop) {
         display: contents;
+        padding-top: 0;
     }
 }
 
@@ -96,7 +98,14 @@ body {
     font-weight: 700;
     letter-spacing: 0.03em;
     text-align: center;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: $mobile) {
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
 
     @media screen and (min-width: $tablet) {
         font-size: 28px;
@@ -106,6 +115,9 @@ body {
     @media screen and (min-width: $desktop) {
         font-size: 36px;
         line-height: 1.17;
+        margin-bottom: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
 }
