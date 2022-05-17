@@ -39,13 +39,53 @@ body {
 
 }
 
+// @media screen and (min-width: $mobile) {
+
+// }
+
+// @media screen and (min-width: $tablet) {
+
+// }
+
+// @media screen and (min-width: $desktop) {
+
+// }
+
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    // padding-top: 94px;
+    // padding-bottom: 94px;
+
+    @media screen and (min-width: $mobile) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
 }
 
 .section--no-padding-top {
     padding-top: 0;
+
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: contents;
+    }
 }
 
 .section--other-background {
@@ -54,11 +94,20 @@ body {
 
 .section__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
     margin-bottom: 50px;
+
+    @media screen and (min-width: $tablet) {
+        font-size: 28px;
+        line-height: 1.17;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 36px;
+        line-height: 1.17;
+    }
+
 }
 
 .visually-hidden {
