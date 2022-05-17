@@ -1,15 +1,32 @@
 .subscription {
-    display: flex;
-    margin-left: 93px;
+    // display: flex;
+    // margin-left: 93px;
+
+    @media screen and (min-width: $mobile) {}
+
+    @media screen and (min-width: $tablet) {}
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        margin-left: 93px;
+    }
 }
 
 .footer__form {
-    display: flex;
+    // display: flex;
+
+    @media screen and (min-width: $mobile) {}
+
+    @media screen and (min-width: $tablet) {}
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
 .footer__input {
-    display: flex;
-    width: 358px;
+    // display: flex;
+    // width: 358px;
     height: 50px;
     padding: 0 0 0 16px;
     color: var(--primary-button-text-color);
@@ -28,6 +45,23 @@
         align-items: center;
         letter-spacing: 0.03em;
         color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        width: 358px;
     }
 }
 

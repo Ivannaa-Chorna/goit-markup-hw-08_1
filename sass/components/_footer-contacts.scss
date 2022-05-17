@@ -1,5 +1,18 @@
 .footer-address {
     margin-top: 20px;
+
+    @media screen and (min-width: $mobile) {
+        text-align: center;
+
+    }
+
+    @media screen and (min-width: $tablet) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }
 
 .address__link {
