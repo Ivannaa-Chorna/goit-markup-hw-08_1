@@ -8,9 +8,11 @@
 }
 
 .clients {
-    // display: flex;
-    // flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     // justify-content: center;
+    // margin-left: -30px;
+    // margin-bottom: -30px;
 
     @media screen and (min-width: $mobile) {
         display: flex;
@@ -39,6 +41,10 @@
     //     margin-left: 0;
     // }
 
+    flex-basis: calc(100% / 2 - 20px);
+    margin-left: 20px;
+    margin-bottom: 20px;
+
     @media screen and (min-width: $mobile) {
         flex-basis: calc(100% / 2 - 30px);
         margin-left: 30px;
@@ -62,7 +68,7 @@
 
 .clients__link {
     display: flex;
-    width: 170px;
+    max-width: 170px;
     height: 92px;
     border: 1px solid #afb1b8;
     box-sizing: border-box;

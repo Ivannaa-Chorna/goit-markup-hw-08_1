@@ -38,7 +38,9 @@
 }
 
 .logo.footer__logo--down {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media screen and (min-width: $mobile) {
         display: flex;
@@ -47,8 +49,9 @@
     }
 
     @media screen and (min-width: $tablet) {
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     @media screen and (min-width: $desktop) {
@@ -63,4 +66,21 @@
 
 .footer__logo--light {
     color: #ffffff;
+}
+
+.footer__connection {
+
+    // @media screen and (min-width: $mobile) {
+
+    // }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    // @media screen and (min-width: $desktop) {
+
+    // }
 }
