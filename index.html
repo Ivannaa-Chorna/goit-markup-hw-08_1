@@ -25,6 +25,20 @@
         <nav class="nav">
           <!--Logo -->
           <a href="./index.html" class="logo">Web<span class="logo__dark">Studio</span></a>
+          <button type="button" class="menu__button is-open" data-menu-button>
+            <svg
+              class=""
+              width="40"
+              height="40"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-close" href="./images/symbol-defs.svg#menu-close"></use>
+              <use class="icon-menu" href="./images/symbol-defs.svg#menu-line"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu" id="mobile-menu" data-menu>Мобильное меню</div>
           <!--Menu-->
           <ul class="site-nav">
             <li class="site-nav__item">
@@ -495,5 +509,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
