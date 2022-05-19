@@ -25,6 +25,7 @@
         <nav class="nav">
           <!--Logo -->
           <a href="./index.html" class="logo">Web<span class="logo__dark">Studio</span></a>
+          <!-- Мобильное меню -->
           <button type="button" class="menu__button is-open" data-menu-button>
             <svg
               class=""
@@ -38,7 +39,39 @@
               <use class="icon-menu" href="./images/symbol-defs.svg#menu-line"></use>
             </svg>
           </button>
-          <div class="mobile-menu" id="mobile-menu" data-menu>Мобильное меню</div>
+          <div class="mobile-menu" id="mobile-menu" data-menu>
+            <div class="mobile__navigation">
+              <ul class="mobile__nav">
+                <li class="mobile__nav--item">
+                  <a href="./index.html" class="mobile__link mobile__link--current">Студия</a>
+                </li>
+                <li class="mobile__nav--item">
+                  <a href="./portfolio.html" class="mobile__link">Портфолио</a>
+                </li>
+                <li class="mobile__nav--item"><a href="" class="mobile__link">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="mobile__contacts">
+              <ul class="mobile__list">
+                <li class="mobile__item">
+                  <a href="tel:+380961111111" class="mobile--tel"> +38 096 111 11 11</a>
+                </li>
+                <li class="mobile__item--tel">
+                  <a href="mailto:info@devstudio.com" class="mobile--email"> info@devstudio.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile__soc">
+              <ul class="mobile__soc--list">
+                <li class="mobile__soc--item">
+                  <a href="" class="mobile__soc--link">Instagram</a>
+                </li>
+                <li class="mobile__soc--item"><a href="" class="mobile__soc--link">Twitter</a></li>
+                <li class="mobile__soc--item"><a href="" class="mobile__soc--link">Facebook</a></li>
+                <li class="mobile__soc--item"><a href="" class="mobile__soc--link">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
           <!--Menu-->
           <ul class="site-nav">
             <li class="site-nav__item">
