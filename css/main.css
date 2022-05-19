@@ -15,6 +15,10 @@ body {
   margin: 0;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -171,6 +175,7 @@ a {
 
 .page-header {
   position: relative;
+  height: 60px;
   border-bottom: 1px solid #eeeeee;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,6 +195,9 @@ a {
 }
 
 .menu__button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -197,6 +205,7 @@ a {
   padding: 0;
   border: 0;
   background-color: transparent;
+  z-index: 2;
 }
 
 .menu__button .icon-menu {
@@ -215,7 +224,7 @@ a {
   display: none;
   position: absolute;
   left: 0;
-  top: 100%;
+  top: 0;
   width: 100%;
   height: 796px;
   padding: 48px 40px;
@@ -258,9 +267,13 @@ a {
 
 /* site-nav section */
 .site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .site-nav {
+    display: none;
+  }
 }
 
 .site-nav__item {
@@ -313,9 +326,7 @@ a {
 
 /* Menu header contacts */
 .header-contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   padding: 0;
   margin: 0;
   -webkit-box-align: center;
@@ -333,6 +344,12 @@ a {
 
 .header-contacts__item:first-child {
   margin-left: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .header-contacts {
+    display: none;
+  }
 }
 
 .header-contacts__link {
@@ -1634,6 +1651,8 @@ a {
   bottom: 0;
   width: 100%;
   height: 100%;
+  padding: 94px 15px;
+  overflow-y: scroll;
   background: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 500ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1647,18 +1666,31 @@ a {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
   padding: 40px;
-  height: 581px;
-  width: 528px;
+  width: 100%;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    height: 581px;
+    width: 528px;
+  }
 }
 
 .modal-close {
@@ -1674,6 +1706,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: block;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -1698,7 +1731,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 448px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1815,10 +1848,62 @@ textarea:focus-within {
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+
+@media screen and (min-width: 480px) {
+  .checkbox-text-field {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .checkbox-text-field {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-text-field {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+.checkbox-text-field .link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .checkbox-text-field .link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .checkbox-text-field .link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-text-field .link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .icon-checkbox {
@@ -1856,16 +1941,6 @@ textarea:focus-within {
   margin-right: 5px;
   background-color: var(--accent-color);
   fill: var(--primary-button-text-color);
-}
-
-.checkbox-text-field .link {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  color: var(--accent-color);
 }
 
 .button-submit-form {
