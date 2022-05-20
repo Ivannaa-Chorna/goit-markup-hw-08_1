@@ -240,7 +240,7 @@ a {
   padding: 0;
   border: 0;
   background-color: transparent;
-  z-index: 2;
+  z-index: 222;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -290,9 +290,11 @@ a {
 
 .mobile-menu.is-open {
   display: block;
+  z-index: 111;
 }
 
 .mobile__nav--item {
+  display: block;
   margin-bottom: 32px;
 }
 
@@ -301,6 +303,7 @@ a {
 }
 
 .mobile__link {
+  display: block;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.17;
@@ -333,6 +336,7 @@ a {
 }
 
 .mobile__item--tel {
+  display: block;
   margin-top: 32px;
 }
 
@@ -345,6 +349,7 @@ a {
 }
 
 .mobile--email {
+  display: block;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
@@ -360,6 +365,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 18px;
 }
 
