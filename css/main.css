@@ -375,7 +375,7 @@ a {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
-  width: 22px;
+  font-size: 3vw;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
@@ -593,39 +593,46 @@ a {
 .hero {
   background-color: #c4c4c4;
   text-align: center;
-  width: 100%;
-  height: 400px;
   padding: 118px 0;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Img-hero.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/img-hero-480.jpeg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/img-hero-480.jpeg);
 }
 
 @media screen and (min-width: 480px) {
   .hero {
-    width: 480px;
-    height: 400px;
-    padding: 118px 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/img-hero-480.jpeg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/img-hero-480.jpeg);
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1199px) {
   .hero {
-    width: 768px;
-    height: 400px;
-    padding: 118px 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/img-hero-768.jpeg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/img-hero-768.jpeg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 100%;
-    height: 600px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/Img-hero.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/Img-hero.jpg);
     padding: 200px 0;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/img-hero-480@2x.jpeg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/img-hero-480@2x.jpeg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/img-hero-768@2x.jpeg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/img-hero-768@2x.jpeg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/Img-hero@2x.jpeg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/Img-hero@2x.jpeg);
   }
 }
 
@@ -1019,6 +1026,9 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -1067,6 +1077,10 @@ a {
   margin-bottom: 20px;
 }
 
+.clients__item:last-child {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 480px) {
   .clients__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
@@ -1088,6 +1102,7 @@ a {
 @media screen and (min-width: 1200px) {
   .clients__item {
     margin-left: 30px;
+    margin-bottom: 0;
   }
   .clients__item:first-child {
     margin-left: 0;
@@ -1098,7 +1113,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 170px;
+  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   -webkit-box-sizing: border-box;
@@ -1294,13 +1309,13 @@ a {
 
 @media screen and (min-width: 768px) {
   .connection {
-    margin: 60px 0;
+    margin: 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .connection {
-    margin-left: 70px;
+    margin: 0 0 0 70px;
   }
 }
 
@@ -1425,6 +1440,7 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 0;
     margin-left: 93px;
   }
 }
