@@ -161,6 +161,8 @@ img {
   height: auto;
   margin: 0;
   padding: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 ul,
