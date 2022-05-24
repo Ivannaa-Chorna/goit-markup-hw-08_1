@@ -2,7 +2,9 @@
     // display: flex;
     // margin-left: 93px;
 
-    @media screen and (min-width: $mobile) {}
+    @media screen and (min-width: $mobile) {
+        margin-top: 60px;
+    }
 
     @media screen and (min-width: $tablet) {
         margin-top: 60px;

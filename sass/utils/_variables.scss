@@ -51,11 +51,6 @@ body.modal-open {
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @media screen and (min-width: $mobile) {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-
     @media screen and (min-width: $tablet) {
         padding-top: 60px;
         padding-bottom: 60px;
@@ -72,16 +67,8 @@ body.modal-open {
     display: none;
     padding-top: 0;
 
-    @media screen and (min-width: $mobile) {
-        display: none;
-    }
-
-    @media screen and (min-width: $tablet) {
-        display: none;
-    }
-
     @media screen and (min-width: $desktop) {
-        display: contents;
+        display: block;
         padding-top: 0;
     }
 }
@@ -94,14 +81,9 @@ body.modal-open {
     font-weight: 700;
     letter-spacing: 0.03em;
     text-align: center;
-    // margin-bottom: 50px;
-    padding-top: 60px;
-    padding-bottom: 30px;
+    padding-top: 0;
+    margin-bottom: 30px;
 
-    @media screen and (min-width: $mobile) {
-        padding-top: 0;
-        padding-bottom: 30px;
-    }
 
     @media screen and (min-width: $tablet) {
         font-size: 28px;
